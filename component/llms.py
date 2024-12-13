@@ -2,11 +2,14 @@ from langchain.prompts import PromptTemplate
 from component.embedding import Jinaembedding
 from component.databases import Vectordatabase
 from openai import OpenAI
+import os
+
+base_url="https://api.gpts.vin/v1"
 
 class Openai_model:
     def __init__(self,model_name:str='gpt-3.5-turbo',temperature:float=0.9) -> None:
         #初始化大模型
-        self.model = OpenAI(api_key="sk-zBYOSwgd6AyAc7OFlVN5igxvPQlyVha3L2H0qPebuHqxMQS9", base_url="https://api.gpts.vin/v1")
+        self.model = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url=base_url)
         self.model_name=model_name
         self.temperature=temperature
 
