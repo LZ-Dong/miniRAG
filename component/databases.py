@@ -1,15 +1,10 @@
 from tqdm import tqdm
 import numpy as np 
-from component.embedding import HFembedding,OpenAIembedding,Zhipuembedding,Jinaembedding
 import os
 import json
 from typing import List
 
-
-
-
 class Vectordatabase:
-    
     #初始化方法，传入一个字块列表
     def __init__(self,docs:List=[]) -> None:
         self.docs = docs
@@ -27,6 +22,7 @@ class Vectordatabase:
             os.makedirs(path)
         with open(f"{path}/doecment.json", 'w', encoding='utf-8') as f:
             json.dump(self.docs, f, ensure_ascii=False)
+        self.vectors = [vector.tolist() for vector in self.vectors]
         with open(f"{path}/vectors.json", 'w', encoding='utf-8') as f:
                 json.dump(self.vectors, f)
 
