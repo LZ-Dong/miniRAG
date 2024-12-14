@@ -16,7 +16,7 @@
 
 ## 项目流程图
 
-# ![RAG](.\images\figure1.png)
+# ![RAG](./images/figure1.png)
 
 ## 举例说明
 
@@ -34,7 +34,7 @@
 
 **Response**
 
-![Response](.\images\figure2.png)
+![Response](./images/figure2.png)
 
 # 项目结构
 
