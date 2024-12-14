@@ -10,13 +10,13 @@
 > 以下为笔者所构思的RAG实现过程，这里面主要包括包括三个基本步骤：
 >
 > 1. 索引 — 将文档库分割成较短的 Chunk，并通过编码器构建向量索引。
->2. 检索 — 根据问题和 chunks 的相似度检索相关文档片段。
+> 2. 检索 — 根据问题和 chunks 的相似度检索相关文档片段。
 > 3. 生成 — 以检索到的上下文为条件，生成问题的回答。
 >
 
 ## 项目流程图
 
-# ![figure1](images\figure1.png)
+# ![RAG](.\images\figure1.png)
 
 ## 举例说明
 
@@ -34,7 +34,7 @@
 
 **Response**
 
-![image-20241214210831500](images\figure2.png)
+![Response](.\images\figure2.png)
 
 # 项目结构
 
